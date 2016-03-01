@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-calendar",
+  "name": "bootstrap-calendar2",
   "main": [
     "./js/calendar.js",
     "./css/calendar.css"
