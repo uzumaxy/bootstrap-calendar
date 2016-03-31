@@ -1224,12 +1224,12 @@ if(!String.prototype.formatNum) {
 
 		slider.slideUp('fast', function() {
 			var event_list = $('.events-list', cell);
+			self.activecell = $('[data-cal-date]', cell).text();
 			slider.html(self.options.templates['events-list']({
 				cal: self,
 				events: self.getEventsBetween(parseInt(event_list.data('cal-start')), parseInt(event_list.data('cal-end')))
 			}));
 			row.after(slider);
-			self.activecell = $('[data-cal-date]', cell).text();
 			$('#cal-slide-tick').addClass('tick' + tick_position).show();
 			slider.slideDown('fast', function() {
 				$('body').one('click', function() {
